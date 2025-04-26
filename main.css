@@ -27,6 +27,10 @@ header a {
     text-decoration: none;
 }
 
+header a:hover {
+    color: var(--text-color);
+}
+
 nav {
     border-bottom: 2px solid var(--line-color);
     border-top: 2px solid var(--line-color);
@@ -96,19 +100,20 @@ h2 a {
         margin: 20px;
     }
 
-    main {
+    article {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(100px, 2fr));
+        grid-template-columns: 30% 70%;
     }
 
     .post-date {
-        grid-column: 1;
+        text-align: right;
         border-right: 2px solid var(--line-color);
-    }   
+        border-bottom: none;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
 
-    .post-content {
-        grid-column: 2;
-    }
-
+      .post-content {
+        border-bottom: 2px solid var(--line-color);
+      }
 }
